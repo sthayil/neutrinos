@@ -133,16 +133,16 @@ hist_angleweighednumtracks = TH1D('hist_angleweighednumtracks' ,'hist_angleweigh
 hist_angleweighednumparticles = TH1D('hist_angleweighednumparticles' ,'hist_angleweighednumparticles',45,0,45)
 
 #Declare arrays
-chargedbetaover0=chargedbetaoverpt5=chargedbetaoverpt9=chargedbetaoverpt95=chargedbetaovertest=[]
-betaover0=betaoverpt5=betaoverpt9=betaoverpt95=betaovertest=[]
-threechargedbetaover0=threechargedbetaoverpt5=threechargedbetaoverpt9=threechargedbetaoverpt95=threechargedbetaovertest=[]
-threebetaover0=threebetaoverpt5=threebetaoverpt9=threebetaoverpt95=threebetaovertest=[]
-allchargedparticles_b0pt0=allchargedparticles_b0pt5=allchargedparticles_b0pt9=allchargedparticles_b0pt95=allchargedparticles_b0test=[]
-allparticles_b0pt0=allparticles_b0pt5=allparticles_b0pt9=allparticles_b0pt95=allparticles_b0test=[]
-allanglescharged_b0pt0 =allanglescharged_b0pt5 =allanglescharged_b0pt9 =allanglescharged_b0pt95 =allanglescharged_b0test =[]
-allangles_b0pt0 =allangles_b0pt5 =allangles_b0pt9 =allangles_b0pt95 =allangles_b0test =[]
-eventangleweight_b0pt0 =eventangleweight_b0pt5 =eventangleweight_b0pt9 =eventangleweight_b0pt95 =eventangleweight_b0test =[]
-eventangleweightcharged_b0pt0 =eventangleweightcharged_b0pt5 =eventangleweightcharged_b0pt9 =eventangleweightcharged_b0pt95 =eventangleweightcharged_b0test =[]
+chargedbetaover0,chargedbetaoverpt5,chargedbetaoverpt9,chargedbetaoverpt95,chargedbetaovertest=[],[],[],[],[]
+betaover0,betaoverpt5,betaoverpt9,betaoverpt95,betaovertest=[],[],[],[],[]
+threechargedbetaover0,threechargedbetaoverpt5,threechargedbetaoverpt9,threechargedbetaoverpt95,threechargedbetaovertest=[],[],[],[],[]
+threebetaover0,threebetaoverpt5,threebetaoverpt9,threebetaoverpt95,threebetaovertest=[],[],[],[],[]
+allchargedparticles_b0pt0,allchargedparticles_b0pt5,allchargedparticles_b0pt9,allchargedparticles_b0pt95,allchargedparticles_b0test=[],[],[],[],[]
+allparticles_b0pt0,allparticles_b0pt5,allparticles_b0pt9,allparticles_b0pt95,allparticles_b0test=[],[],[],[],[]
+allanglescharged_b0pt0 ,allanglescharged_b0pt5 ,allanglescharged_b0pt9 ,allanglescharged_b0pt95 ,allanglescharged_b0test =[],[],[],[],[]
+allangles_b0pt0 ,allangles_b0pt5 ,allangles_b0pt9 ,allangles_b0pt95 ,allangles_b0test =[],[],[],[],[]
+eventangleweight_b0pt0 ,eventangleweight_b0pt5 ,eventangleweight_b0pt9 ,eventangleweight_b0pt95 ,eventangleweight_b0test =[],[],[],[],[]
+eventangleweightcharged_b0pt0 ,eventangleweightcharged_b0pt5 ,eventangleweightcharged_b0pt9 ,eventangleweightcharged_b0pt95 ,eventangleweightcharged_b0test =[],[],[],[],[]
 
 
 #First event loop
@@ -176,8 +176,8 @@ for inputfile in inputfiles:
 
         numchargedpart0=        numchargedpart5=        numchargedpart9=        numchargedpart95=        numchargedparttest=0
         numpart0=        numpart5=        numpart9=        numpart95=        numparttest=0
-        eventchargedparticles_b0pt0=        eventchargedparticles_b0pt5=        eventchargedparticles_b0pt9=        eventchargedparticles_b0pt95=        eventchargedparticles_b0test=[]
-        eventparticles_b0pt0=        eventparticles_b0pt5=        eventparticles_b0pt9=        eventparticles_b0pt95=        eventparticles_b0test=[]
+        eventchargedparticles_b0pt0,        eventchargedparticles_b0pt5,        eventchargedparticles_b0pt9,        eventchargedparticles_b0pt95,        eventchargedparticles_b0test=[],[],[],[],[]
+        eventparticles_b0pt0,        eventparticles_b0pt5,        eventparticles_b0pt9,        eventparticles_b0pt95,   eventparticles_b0test=[],[],[],[],[]
 
         #In an event, loop over particles. If  beta>0.5, set flag. If >0.9, set other flag.
         for j in range(len(tree.pdgf)): #for each final state particle in that event
